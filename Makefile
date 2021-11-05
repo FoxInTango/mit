@@ -19,7 +19,7 @@ TARGET_TYPE_DLL = $(MK_TRUE)
 # ** 项目配置区 **
 #
 #    输出文件名称
-TARGET_NAME     = libmodel
+TARGET_NAME     = libfoxintango
 #    输出文件后缀 [自动判别]
 TARGET_BIN_EXT = 
 TARGET_LIB_EXT_STATIC  =
@@ -122,7 +122,6 @@ $(TARGET_OBJECTS_AS):%.o:%.s
 $(TARGET_OBJECTS_CC):%.o:%.c
 	$(CC) ${CCFLAGS} $(TARGET_LIB_PIC_SHARED) $< -o $@
 $(TARGET_OBJECTS_PP):%.o:%.cpp
-	echo ${TARGET_HEADER_DIRS}
 	$(CC) ${PPFLAGS} $(TARGET_LIB_PIC_SHARED) $< -o $@
 
 clean   :
@@ -138,7 +137,8 @@ install :
 	cp     $(TARGET_HEADERS) $(INSTALL_PATH_PREFIX)/include/$(TARGET_NAME)
 	cp     $(TARGET_LIB_DIR)/$(TARGET_NAME).$(TARGET_LIB_EXT_STATIC) $(INSTALL_PATH_PREFIX)/lib/
 	cp     $(TARGET_LIB_DIR)/$(TARGET_NAME).$(TARGET_LIB_EXT_DYNAMIC) $(INSTALL_PATH_PREFIX)/lib/
-	cp     $(TARGET_BIN_DIR)/$(TARGET_NAME).$(TARGET_BIN_EXT) $(INSTALL_PATH_PREFIX)/bin/
+	cp     $(TARGET_BIN_DIR)/$(TARGET_NAME) $(INSTALL_PATH_PREFIX)/bin
+	$(shell ./pc.sh $(TARGET_NAME) 1.0.0 /usr/local)
 uninstall : 
 	rm -rf $(INSTALL_PATH_PREFIX)/include/$(TARGET_NAME)
 	rm -rf $(INSTALL_PATH_PREFIX)/lib/$(TARGET_NAME).*
