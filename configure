@@ -13,18 +13,20 @@ index=1
 
 function createProject() {
     echo "create new project."
+    name=$2
+    echo ${name%:*}
+    echo ${name#*:}
 }
 
 function updateProject() {
-     echo "update old project"
+     echo "update old project."
 }
 
 while [ $index -le $# ]
 do
-    echo ${!index}
 
     if   [ "create" == ${!index} ];then
-            createProject
+        createProject $@
     elif [ "update" == ${!index} ];then
             updateProject
     fi
