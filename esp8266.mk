@@ -18,7 +18,7 @@ TARGET_NAME_EXT_ELF = elf
 TARGET_NAME_EXT_BIN = bin
 TARGET_NAME_EXT_HEX = hex
 #    安装位置
-INSTALL_PATH = /home/sparrow/zMCU/boot
+INSTALL_PATH = install/path
 PROJECT_ROOT = ./
 PROJECT_DIR_BESIDES  = \(
 PROJECT_DIR_BESIDES += -path ./.git
