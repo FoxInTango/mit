@@ -4,9 +4,29 @@
 
 ## ./configure create | update -name libfoxintango -path path-to-libfoxintango -type lib|bin -arch=
 
-for arg in $@
+#for arg in $@
+#do
+#    echo $arg
+#done
+
+index=1
+
+function createProject() {
+    echo "create new project."
+}
+
+function updateProject() {
+     echo "update old project"
+}
+
+while [ $index -le $# ]
 do
-    echo $arg
+    echo ${!index}
+
+    if   [ "create" == ${!index} ];then
+            createProject
+    elif [ "update" == ${!index} ];then
+            updateProject
+    fi
+    let index=index+1
 done
-
-
