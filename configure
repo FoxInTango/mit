@@ -2,7 +2,7 @@
 
 ## $# $@ $* $0 $1 $2
 
-## ./configure -name libfoxintango -path path-to-libfoxintango -type lib|bin 
+## ./configure create | update -name libfoxintango -path path-to-libfoxintango -type lib|bin -arch=
 
 for arg in $@
 do
