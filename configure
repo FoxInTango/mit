@@ -1,0 +1,12 @@
+#!/bin/bash
+
+## $# $@ $* $0 $1 $2
+
+## ./configure -name libfoxintango -path path-to-libfoxintango -type lib|bin 
+
+for arg in $@
+do
+    echo $arg
+done
+
+
