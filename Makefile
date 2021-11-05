@@ -142,3 +142,4 @@ install :
 uninstall : 
 	rm -rf $(INSTALL_PATH_PREFIX)/include/$(TARGET_NAME)
 	rm -rf $(INSTALL_PATH_PREFIX)/lib/$(TARGET_NAME).*
+	rm -rf $(INSTALL_PATH_PREFIX)/lib/pkgconfig/$(TARGET_NAME).pc
