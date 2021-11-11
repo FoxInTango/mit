@@ -4,20 +4,16 @@
 
 ## ./configure create | update -name libfoxintango -path path-to-libfoxintango -type lib|bin -arch=
 
-#for arg in $@
-#do
-#    echo $arg
-#done
-
-index=1
-
+FIND_PARAM_RESULT_K=
+FIND_PARAM_RESULT_V=
 function findParam () {
     i=2
     echo $2
     while [ $i -le $# ]
     do
-        if [ $( expr match $i $1 ) -ge 0 ];then
-            echo "expr ok."
+        if [ $( expr match $i -$1 ) -ge 0 ];then
+            FIND_PARAM_RESULT_K=$1
+            FIND_PARAM_RESULT_V=$(i+1)
             return $i
         fi
         let i=i+1
@@ -39,6 +35,8 @@ function createProject() {
 function updateProject() {
      echo "update old project."
 }
+
+index=1
 
 while [ $index -le $# ]
 do
