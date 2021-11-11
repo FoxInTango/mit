@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 name=$1
 version=$2
 prefix=$3
