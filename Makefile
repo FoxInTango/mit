@@ -76,6 +76,11 @@ CCFLAGS = -c -Wall -fvisibility=hidden  #-I${TARGET_HEADER_DIRS}
 PPFLAGS = -c -Wall -fvisibility=hidden -std=c++11
 # 平台检测 -- DARWIN
 ifeq (${PLATFORM_ARCH},${PLATFORM_ARCH_DARWIN})
+    CC=clang
+    AS=as
+    AR=ar
+    LD=clang
+    CP=llvm-objcopy
     TARGET_BIN_EXT         :=
     TARGET_LIB_EXT_STATIC  := a
     TARGET_LIB_EXT_DYNAMIC := so
