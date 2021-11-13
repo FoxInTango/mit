@@ -30,7 +30,7 @@ INSTALL_PATH_PREFIX = /usr/local
 TARGET_BIN_DIR := ./bin
 TARGET_LIB_DIR := ./lib
 
-PROJECT_ROOT = ./
+PROJECT_ROOT = .
 PROJECT_DIR_BESIDES  = \(
 PROJECT_DIR_BESIDES += -path ./.git
 PROJECT_DIR_BESIDES += -o -path ./obj
