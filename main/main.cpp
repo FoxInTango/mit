@@ -1,7 +1,9 @@
 //#include <libmit/libmit.h>
 
 /**
- * mit create | update 
+ * mit ..     [ ... | path | mitfile | makefile | *.c | *.cpp | *.*] [-cpp]
+ *     create  
+ *     update
  * */
 
 int main(int argc,char** argv) {
