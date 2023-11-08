@@ -416,21 +416,3 @@ current:
 uninstall : 
 	rm -rf $(INSTALL_PATH)
 	rm -f /usr/local/bin/${TARGET_NAME}
-hook_install:
-	insmod lib/modules/alpine_syscall_hooks.ko
-	insmod lib/modules/alpine_network_hooks.ko
-	insmod lib/modules/alpine_vfs.ko
-	insmod lib/modules/alpine_vnw.ko
-hook_uninstall:
-	rmmod alpine_syscall_hooks
-	rmmod alpine_network_hooks
-	rmmod alpine_vfs
-	rmmod alpine_vnw
-hook_echo:
-	@echo -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
-	@dmesg | tail -n20
-# https://www.ruanyifeng.com/blog/2015/02/make.html
-# https://blog.csdn.net/freestep96/article/details/126352344
-# Makefile Path :https://blog.csdn.net/evolay/article/details/121625712
-# 静态库顺序
-# rpath : readelf -d  
