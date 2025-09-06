@@ -30,3 +30,35 @@
 *.exe
 *.out
 *.app
+
+# Modules
+
+# visual studio 
+
+*.cer
+*.cat
+*.sys
+
+*.vsidx
+*.ipch
+*.db
+*.pdb
+*.idb
+*.lib
+*.dll
+*.exe
+*.exp
+*.inf
+*.log
+*.tlog
+*.lastbuildstate#Alpine Ignored
+/applications
+/templates
+/modules
+/libraries
+/lib
+/bin
+/inc
+/thirds
+/.make/*.mk
+/.gitignore
